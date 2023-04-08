@@ -1,3 +1,4 @@
+
 import random
 
 from Player import Player
@@ -47,5 +48,8 @@ while run:
     screen.fill('white')
     all_sprite.draw(screen)
     pg.display.flip()
+
+    if pg.sprite.spritecollide(player,object_group,False,pg.sprite.collide_circle):
+        run=False
 
 pg.init
